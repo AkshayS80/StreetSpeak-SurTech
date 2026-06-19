@@ -1,0 +1,68 @@
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.leaderboard-container {
+    max-width: 600px;
+    margin: 5vh auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.leaderboard-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.leaderboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+}
+
+.leaderboard-item.gold {
+    background-color: #ffd70033;
+    font-weight: bold;
+}
+
+.leaderboard-item.silver {
+    background-color: #c0c0c033;
+    font-weight: bold;
+}
+
+.leaderboard-item.bronze {
+    background-color: #cd7f3233;
+    font-weight: bold;
+}
+
+.rank {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 30px;
+}
+
+.username {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.tokens {
+    font-weight: bold;
+    color: #555;
+}

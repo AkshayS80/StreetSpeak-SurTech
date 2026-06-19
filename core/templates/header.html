@@ -1,0 +1,26 @@
+{% load static %}
+
+<nav>
+    <div class="nav-left">
+        <img src="{% static 'streetspeak.png' %}" alt="StreetSpeak Logo" class="logo">
+    </div>
+    <div class="nav-right">
+    <a href="{% url 'home' %}">Home</a>
+    
+    {% if user.is_authenticated %}
+        <a href="{% url 'report' %}">Report</a>
+        <a href="{% url 'token_history' %}">Token History</a>
+        <div class="nav-item">
+    <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="logout-button">Logout</button>
+    </form>
+</div>
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+    {% endif %}
+    
+    <a href="{% url 'leaderboard' %}">Leaderboard</a>
+    </div>
+    </nav>

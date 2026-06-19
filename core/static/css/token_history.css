@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.token-container {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 90%;
+    margin: 10vh auto;
+    text-align: center;
+}
+
+.token-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.token-count {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #28a745;
+}
+
+.token-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.token-list li {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.token-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.token-left {
+    flex: 1;
+    text-align: left;
+}
+
+.token-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 0.6em;
+    border-radius: 10px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.priority-label {
+    font-size: 0.8em;
+    color: #fff;
+    margin-bottom: 0.2em;
+}
+
+.priority-value {
+    font-size: 1.4em;
+    color: #fff;
+}
+
+/* Priority colors */
+.priority-0 {
+    background-color: #ff07ea; /* amber */
+}
+
+.priority-1 {
+    background-color: #28a745; /* green */
+}
+
+.redeem-link {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.redeem-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.redeem-link a:hover {
+    text-decoration: underline;
+}
+
+.priority-legend {
+    background-color: #f0f2f5;
+    padding: 1em;
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+    font-size: 0.95em;
+    color: #333;
+}
+
+.priority-legend p {
+    margin: 0.3em 0;
+}
+
+/* Colored boxes for legend */
+.legend-box {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.legend-priority-0 {
+    background-color: #ff07ea; /* pink */
+}
+
+.legend-priority-1 {
+    background-color: #28a745; /* green */
+}

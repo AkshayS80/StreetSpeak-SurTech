@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Token History{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/token_history.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="token-container">
+    <h2>Your Token History</h2>
+    <p class="token-count">Total Tokens: {{ tokens }}</p>
+
+    <!-- Legend section -->
+    <div class="priority-legend">
+        <p>
+            <span class="legend-box legend-priority-0"></span>
+            <strong>Priority 0:</strong> Follow‑up required (report wasn’t clear)
+        </p>
+        <p>
+            <span class="legend-box legend-priority-1"></span>
+            <strong>Priority 1:</strong> On‑site check (we will go to the location)
+        </p>
+    </div>
+
+    <p class="redeem-link">
+    <a href="{% url 'rewards' %}">Redeem your tokens here</a>
+    </p>
+
+
+    <ul class="token-list">
+        {% for report in reports %}
+        <li class="token-item">
+            <div class="token-left">
+                <strong>{{ report.description }}</strong><br>
+                {{ report.submitted_at }}
+            </div>
+            <div class="token-right priority-{{ report.priority }}">
+                <span class="priority-label">Priority</span>
+                <span class="priority-value">{{ report.priority }}</span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

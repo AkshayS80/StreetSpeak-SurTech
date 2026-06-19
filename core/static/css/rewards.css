@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.rewards-container {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    max-width: 95%;
+    margin: 8vh auto;
+    text-align: center;
+}
+
+.rewards-container h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.rewards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: stretch;   /* ✅ all cards same height */
+}
+
+.reward-item {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* ✅ button pinned at bottom */
+    min-height: 320px;              /* ✅ consistent card height */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reward-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.reward-img {
+    width: 180px;
+    height: 120px;       /* ✅ fixed size for all images */
+    object-fit: contain; /* ✅ shows full image without cropping */
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.reward-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    color: #333;
+    text-align: center;
+}
+
+.reward-cost {
+    font-size: 1rem;
+    color: #28a745;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.claim-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.claim-btn:hover {
+    background-color: #0056b3;
+}
+
+.claim-btn.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

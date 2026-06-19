@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<section class="welcome-container">
+  <div class="welcome-box">
+    <h1>Welcome to StreetSpeak</h1>
+    <p>Report civic issues and earn tokens while making your city better.</p>
+
+    {% if user.is_authenticated %}
+      <a href="{% url 'report' %}" class="report-button">Report an Issue</a>
+    {% else %}
+      <a href="{% url 'signup' %}" class="report-button">Report an Issue</a>
+    {% endif %}
+    
+  </div>
+</section>
+
+<section class="guidelines">
+    <h2>Submission Guidelines</h2>
+    <ul>
+        <li>📷 <strong>Photo size:</strong> Max 5MB. Accepted formats: JPG, PNG.</li>
+        <li>🖼️ <strong>Photo clarity:</strong> Ensure the issue is clearly visible and centered.</li>
+        <li>📍 <strong>Location:</strong> Enable location access or manually enter the address.</li>
+        <li>📝 <strong>Description:</strong> Provide a brief but clear explanation of the issue.</li>
+        <li>🚫 <strong>Do not upload:</strong> Blurry images, personal photos, or unrelated content.</li>
+    </ul>
+</section>
+
+<section class="faqs">
+  <h2>Frequently Asked Questions (FAQs)</h2>
+  <ul>
+    <li><strong>What is used to verify the photos?</strong><br>We use AI-powered image recognition to validate civic issues.</li>
+
+    <li><strong>How long does it take to review a report?</strong><br>Most reports are reviewed within 24–48 hours.</li>
+
+    <li><strong>Can I report anonymously and earn tokens?</strong><br>No, you’ll need an account to earn tokens.</li>
+
+    <li><strong>What kind of issues can I report?</strong><br>Potholes, broken lights, trash overflow, water leaks, and other public infrastructure problems.</li>
+
+    <li><strong>Do I need to enable location services?</strong><br>It’s recommended for accuracy, but you can manually enter the location too.</li>
+
+    <li><strong>How are tokens awarded?</strong><br>Tokens are awarded based on issue validity, clarity of photo, and community impact.</li>
+
+    <li><strong>Is there a limit to how many reports I can submit?</strong><br>No limit, but spam or duplicate reports may be flagged. The more issues you submit, the more tokens you'll recieve.</li>
+
+    <li><strong>Can I track the status of my report?</strong><br>Yes, you can view updates in your dashboard under “Token History.”</li>
+
+    <li><strong>What happens after I report an issue?</strong><br>It’s reviewed by our system and forwarded to local authorities if validated.</li>
+
+    <li><strong>Can I earn rewards beyond tokens?</strong><br>Yes! Top contributors may be featured on the leaderboard and receive recognition badges.</li>
+
+    <li><strong>What is Priority 0 and 1?</strong><br>Priority 0 indicates that the issue requires further verification. Priority 1 means the issue has been verified and will be addressed promptly.</li>
+  </ul>
+</section>
+</div>
+{% endblock %}

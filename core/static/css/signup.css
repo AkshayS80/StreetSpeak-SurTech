@@ -1,0 +1,88 @@
+.signup-container {
+    background-color: #fff;
+    padding: 3rem 2rem; /* more padding */
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    width: 400px; /* increased width */
+    max-width: 90%;
+    margin: 10vh auto;
+    text-align: center;
+}
+
+.signup-container h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem; /* larger heading */
+    color: #333;
+}
+
+.signup-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* more spacing between fields */
+}
+
+.signup-container input {
+    padding: 0.8rem; /* larger input fields */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.signup-container button {
+    padding: 0.9rem;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.signup-container button:hover {
+    background-color: #218838;
+}
+
+.login-link {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.tooltip-icon {
+    position: relative;
+    cursor: pointer;
+    margin-left: 0.5em;
+    font-size: 1em;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 260px;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 0.8em;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    white-space: normal;
+}
+
+.tooltip-icon:hover .tooltip-text {
+    visibility: visible;
+}

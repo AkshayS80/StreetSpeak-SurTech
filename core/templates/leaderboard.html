@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Leaderboard{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/leaderboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="leaderboard-container">
+    <h2>Leaderboard</h2>
+    <ol class="leaderboard-list">
+        {% for entry in top_users %}
+        <li class="leaderboard-item {% if forloop.counter == 1 %}gold{% elif forloop.counter == 2 %}silver{% elif forloop.counter == 3 %}bronze{% endif %}">
+            <span class="rank">{{ forloop.counter }}</span>
+            <span class="username">{{ entry.user.username }}</span>
+            <span class="tokens">{{ entry.tokens }} tokens</span>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}

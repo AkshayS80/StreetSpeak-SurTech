@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.thankyou-container {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    max-width: 90%;
+    margin: 10vh auto;
+    text-align: center;
+}
+
+.thankyou-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #28a745;
+}
+
+.thankyou-container p {
+    font-size: 1rem;
+    color: #333;
+}

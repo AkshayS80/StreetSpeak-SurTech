@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Rewards{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/rewards.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="rewards-container">
+    <h2>Available Rewards</h2>
+    <ul class="rewards-list">
+        {% for reward in rewards %}
+        <li class="reward-item">
+            <!-- Use static images -->
+            <img src="{% static reward.image_filename %}" alt="{{ reward.name }}" class="reward-img">
+
+            <span class="reward-name">{{ reward.name }}</span>
+            <span class="reward-cost">{{ reward.cost }} tokens</span>
+
+            {% if tokens >= reward.cost %}
+                <form method="post" action="{% url 'claim_reward' reward.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="claim-btn">Redeem</button>
+                </form>
+            {% else %}
+                <button class="claim-btn disabled" disabled>Not enough tokens</button>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

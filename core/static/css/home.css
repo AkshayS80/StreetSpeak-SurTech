@@ -1,0 +1,105 @@
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-image: url('/static/images/your-background.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    padding: 2em;
+}
+
+.welcome-box {
+    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+    padding: 2em;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.welcome-box h1,
+.welcome-box p {
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.report-button {
+    display: inline-block;
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+.report-button:hover {
+    background: linear-gradient(to right, #ee0979, #ff6a00);
+}
+
+.guidelines {
+    background-color: #f9f9f9;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.guidelines h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #ee0979;
+}
+
+.guidelines ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.guidelines li {
+    margin-bottom: 0.8em;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.guidelines li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+}
+
+.faqs {
+    background-color: #f9f9f9;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.faqs h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    color: #ee0979;
+    font-size: 1.8em;
+}
+
+.faqs ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.faqs li {
+    margin-bottom: 1.2em;
+}

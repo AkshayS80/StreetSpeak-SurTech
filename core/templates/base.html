@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StreetSpeak</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <div class="page-wrapper">
+    {% block header %}{% include 'header.html' %}{% endblock %}
+
+    <main class="main-content">
+      {% block content %}{% endblock %}
+    </main>
+
+    {% block footer %}{% include 'footer.html' %}{% endblock %}
+  </div>
+
+</body>
+</html>

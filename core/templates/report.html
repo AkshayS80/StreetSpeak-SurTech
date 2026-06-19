@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/report.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="report-container">
+  <h2>Report an Issue</h2>
+
+  <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="hidden" id="id_latitude" name="latitude">
+      <input type="hidden" id="id_longitude" name="longitude">
+      <button type="submit" class="submit-button">Submit</button>
+  </form>
+{% endblock %}
+
+<script>
+navigator.geolocation.getCurrentPosition(function(position) {
+    document.getElementById('id_latitude').value = position.coords.latitude;
+    document.getElementById('id_longitude').value = position.coords.longitude;
+});
+
+</script>
